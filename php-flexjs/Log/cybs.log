@@ -1,0 +1,50 @@
+[2022-05-13 10:51:22] [CyberSource\Authentication\Core\MerchantConfiguration] [INFO] Log Directory is Invalid, Default taking: Log
+[DEBUG] HTTP Request body  ~BEGIN~
+{"encryptionType":"RsaOaep256","targetOrigin":"http:\/\/localhost:8000"}
+~END~
+*   Trying 66.185.182.49...
+* TCP_NODELAY set
+* Connected to apitest.cybersource.com (66.185.182.49) port 443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /home/deiss/Bureau/cybersource-flex-samples-php/vendor/cybersource/rest-client-php/lib/ssl/cacert.pem
+  CApath: /etc/ssl/certs
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=US; ST=California; L=Foster City; jurisdictionC=US; jurisdictionST=Delaware; O=Cybersource Corporation; businessCategory=Private Organization; serialNumber=2838921; CN=apitest.cybersource.com
+*  start date: Jan 21 22:56:56 2022 GMT
+*  expire date: Feb 15 22:56:56 2023 GMT
+*  subjectAltName: host "apitest.cybersource.com" matched cert's "apitest.cybersource.com"
+*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2014 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1M
+*  SSL certificate verify ok.
+> POST /flex/v1/keys?format=legacy HTTP/1.1
+Host:apitest.cybersource.com
+User-Agent: Swagger-Codegen/1.0.0/php
+Accept: application/json
+Content-Type: application/json
+v-c-merchant-id:ecoebj0048
+Signature:keyid="3d3cf7ff-a89b-448b-a372-edcda65014a8", algorithm="HmacSHA256", headers="host date (request-target) digest v-c-merchant-id", signature="8tqG7S7AU8B7NDCDYdnsWEBdOjVPSMYvmoGBrPFKVpk="
+Date:Fri, 13 May 2022 10:51:22 GMT
+Digest: SHA-256=vMFBTLNPQWqc2Ca7BGEHwc3cMXayNxwLu8LrQ7R4xGo=
+Content-Length: 72
+
+* upload completely sent off: 72 out of 72 bytes
+< HTTP/1.1 200 
+< X-Application-Context: application:8443
+< Strict-Transport-Security: max-age=31536000
+< Cache-Control: no-cache, no-store, must-revalidate
+< Pragma: no-cache
+< Expires: -1
+< X-Download-Options: noopen
+< Digest: SHA-256=1HxlP/b+dSE8NVCiHRkkjEMeG241UPssps2/ex4xHwQ=
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 927
+< Date: Fri, 13 May 2022 09:51:25 GMT
+< Connection: keep-alive
+< v-c-correlation-id: 93827c48-0931-444e-b7bc-34837c8cc661
+< 
+* Connection #0 to host apitest.cybersource.com left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"keyId":"07iFR5hQyBOZQ1Vr4erYf86Eh2mO15XI","der":{"format":"X.509","algorithm":"RSA","publicKey":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiVBJUTgGVD5H6ogpi5q9gKYrX33xSpKHwTILQpEskMoepGn82NfPOLF8QZx6h9u2BvCJu/DZCmjjKhBADAfdYqysCMEF6z+kkVxP+8LBK5Sw9/GYj5QODBtOP2rJ3szYnAOOAYZcDuDRx0aP9FTmE5MBx13yYY4XuwAXs4vdh20kQqqzZrWxAT2Y1GcoAgk6OGB6/pf66kjsFnABVyYhxPP0axlmpB96B2WXqTSye1vVrYjKus67g7PcWy+a8M5bSsV0TJMqWTUC0sEgOWvAipwJXCH276LSD0ZWq4btOIoudHnPYnFSj2Iz70ZO0ikhvKgxZkr5s6fp76ieY92/JwIDAQAB"},"jwk":{"kty":"RSA","use":"enc","kid":"07iFR5hQyBOZQ1Vr4erYf86Eh2mO15XI","n":"iVBJUTgGVD5H6ogpi5q9gKYrX33xSpKHwTILQpEskMoepGn82NfPOLF8QZx6h9u2BvCJu_DZCmjjKhBADAfdYqysCMEF6z-kkVxP-8LBK5Sw9_GYj5QODBtOP2rJ3szYnAOOAYZcDuDRx0aP9FTmE5MBx13yYY4XuwAXs4vdh20kQqqzZrWxAT2Y1GcoAgk6OGB6_pf66kjsFnABVyYhxPP0axlmpB96B2WXqTSye1vVrYjKus67g7PcWy-a8M5bSsV0TJMqWTUC0sEgOWvAipwJXCH276LSD0ZWq4btOIoudHnPYnFSj2Iz70ZO0ikhvKgxZkr5s6fp76ieY92_Jw","e":"AQAB"}}
+~END~
