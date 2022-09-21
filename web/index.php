@@ -131,8 +131,8 @@ include 'infoOrder.php';
 
                     <button type="button" <?php if($order==null){ echo "disabled"; } ?> id="pay-button" class="btn btn-primary">Payer</button>
                     <input type="hidden" id="flexresponse" name="flexresponse">
-                    <input type="hidden" id="od" name="od" value="<?php echo $_GET['od']; ?>">
-                    <input type="hidden" id="rd_uri" name="rd_uri" value="<?php echo $_GET['rd_uri']; ?>">
+                    <input type="hidden" id="order_id" name="order_id" value="<?php echo $_GET['order_id']; ?>">
+                    <input type="hidden" id="redirect_url" name="redirect_url" value="<?php echo $_GET['redirect_url']; ?>">
                     
                 </form>
             </div>

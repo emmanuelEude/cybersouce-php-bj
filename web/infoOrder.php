@@ -2,8 +2,8 @@
 
     $curl = curl_init();
     
-    if(array_key_exists("redirect_uri",$_GET) && $_GET["redirect_uri"]!=null){
-        $redirect_uri=$_GET["redirect_uri"];
+    if(array_key_exists("redirect_url",$_GET) && $_GET["redirect_url"]!=null){
+        $redirect_url=$_GET["redirect_url"];
     }
 
     if(array_key_exists("order_id",$_GET) && $_GET["order_id"]!=null){
